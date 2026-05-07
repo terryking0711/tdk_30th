@@ -6,7 +6,7 @@
 ## 技術整合
 ### 預先掃描建圖
 1. 雙 LiDAR fusion
-    - LiDAR 型號: RPLiDAR C1, [Driver](https://github.com/Slamtec/rplidar_ros/tree/ros2)
+    - LiDAR 型號: RPLiDAR S3, [Driver](https://github.com/Slamtec/rplidar_ros/tree/ros2)
     - laser_filters
     - ira_laser_tools: laserscan_multi_merger [source](https://github.com/nakai-omer/ira_laser_tools/tree/humble)
 2. 建圖
@@ -30,7 +30,7 @@
     - ground truth: map->base_footprint (虛擬的 tf 關係)
     > 有回授的情況
     - odom->base_footprint: odometry 積分提供位移資訊
-    - map->odom: 用 SLAM 校正，讓兩者盡量重疊
+    - map->odom: 用 SLAM 校正，讓 odom 盡量固定
     > 沒有回授的情況
     - odom->base_footprint: 發送假的 tf 讓兩者完全重疊
     - map->odom: odom 跟隨機器移動，用 SLAM 計算當前 odom 偏離 map 多少
