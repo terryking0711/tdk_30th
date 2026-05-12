@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 from launch.conditions import IfCondition
 
 def generate_launch_description():
-    localization_pkg = os.path.join('/home/ted/tdk_slam_ws/src/tdk_slam_manager')
+    localization_pkg = os.path.join('/home/tdk/tdk_slam_ws/src/tdk_slam_manager')
     sllidar_pkg = get_package_share_directory('rplidar_ros')
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     localization_mode = LaunchConfiguration('localization_mode', default='mapping')
